@@ -1,10 +1,12 @@
 FROM dmoj/runtimes-tier2
 
 ARG TAG=mayfes2025
-ARG tmp=1
+ARG tmp=2
 
 RUN curl -m 60 https://gist.githubusercontent.com/platypus999/259bb49f364bef0549cde65eab676a3f/raw/b8d6a0d88c5e8bd6147392123e86cb679b2bab43/fish.py -L -o /usr/bin/fish && \
-    chmod +x /usr/bin/fish
+    chmod +x /usr/bin/fish && \
+	curl -m 60 https://gist.github.com/tRue-math/da6f9974456c1dbdea29a8e334ac6afb/mao.py -L -o /usr/bin/mao && \
+	chmod +x /usr/bin/mao
 
 RUN mkdir /judge /problems && cd /judge && \
 	curl -L https://github.com/tRue-math/judge-server/archive/"${TAG}".tar.gz | tar -xz --strip-components=1 && \
@@ -15,10 +17,5 @@ RUN mkdir /judge /problems && cd /judge && \
 	HOME=~judge . ~judge/.profile && \
 	runuser -u judge -w PATH -- /env/bin/dmoj-autoconf -V > /judge-runtime-paths.yml && \
 	echo '  crt_x86_in_lib32: true' >> /judge-runtime-paths.yml
-
-# RUN curl -m 60 https://gist.github.com/anonymous/6392418/raw/3b16018cb47f2f9ad1fa085c155cc5c0dc448b2d/fish.py -L -o ~judge/fish.py && \
-# 	echo '#!/bin/sh\n/usr/bin/python3.13 ~judge/fish.py "$1"' >> /usr/bin/fish && \
-# 	chmod +x /usr/bin/fish
-	
 
 ENTRYPOINT ["/usr/bin/tini", "--", "/judge/.docker/entry"]
