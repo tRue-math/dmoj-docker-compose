@@ -54,6 +54,7 @@ runtime:
   javac: /usr/bin/javac
   java8: /usr/lib/jvm/jdk-8-oracle-i586/bin/java
   javac8: /usr/lib/jvm/jdk-8-oracle-i586/bin/javac
+  fish: /usr/bin/fish
 # Custom V8 build to facilitate online judging: https://github.com/DMOJ/v8dmoj
   v8dmoj: /home/judge/judge/executors/v8dmoj
   php: /usr/bin/php
