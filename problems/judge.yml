@@ -21,9 +21,10 @@ runtime:
   turing_dir: /opt/turing/tprolog
   node: /usr/bin/node
   lua: /usr/bin/lua
-  ocaml: /usr/bin/ocamlopt
-  pypy: /opt/pypy/bin/pypy
-  pypydir: /opt/pypy/
+  ocaml: ~judge/.opam/dmoj/bin/ocamlopt
+  ocamlfind: /home/judge/.opam/dmoj/bin/ocamlfind
+  pypy: /opt/pypy2/bin/pypy
+  pypydir: /opt/pypy2/
   pypy3: /opt/pypy3/bin/pypy
   pypy3dir: /opt/pypy3/
   ghc: /usr/bin/ghc
@@ -46,16 +47,23 @@ runtime:
   gfortran: /usr/bin/gfortran
   nasm: /usr/bin/nasm
   ld: /usr/bin/ld
-  python: /opt/python27/bin/python2.7
-  python2dir: /opt/python27/
-  python3: /opt/python34/bin/python3.4
-  python3dir: /opt/python34/
+  python: /usr/bin/python2.7
+  python2dir: /usr/
+  python3: /usr/bin/python3.13
+  python3dir: /usr/
   java: /usr/bin/java
   javac: /usr/bin/javac
   java8: /usr/lib/jvm/jdk-8-oracle-i586/bin/java
   javac8: /usr/lib/jvm/jdk-8-oracle-i586/bin/javac
   fish: /usr/bin/fish
   mao: /usr/bin/mao
+  cargo: /home/judge/.cargo/bin/cargo
+  aheui: /usr/bin/aheui
+  starry: /usr/bin/starry
+  mines: /usr/bin/mines
+  fernando: /usr/bin/fernando
+  produire: /usr/bin/produire
+  osabie: /usr/bin/05ab1e
 # Custom V8 build to facilitate online judging: https://github.com/DMOJ/v8dmoj
   v8dmoj: /home/judge/judge/executors/v8dmoj
   php: /usr/bin/php
@@ -69,5 +77,5 @@ runtime:
   gnustep-config: /usr/bin/gnustep-config
   gobjc: /usr/bin/gcc
   bash: /usr/bin/bash
-  pypy3: /opt/pypy3/bin/pypy3.10
+  pypy3: /opt/pypy3/bin/pypy3.11
   ruby: /usr/bin/ruby
