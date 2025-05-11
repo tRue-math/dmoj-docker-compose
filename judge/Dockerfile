@@ -24,7 +24,7 @@ RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/platypus999/259bb49f36
     curl https://rdr.utopiat.net/files/mono//produire-mono-1.9.1182.tar.gz -LO && \
     mkdir -p /usr/lib/mono/produire && \
     tar xf produire-mono-1.9.1182.tar.gz -C /usr/lib/mono/produire && \
-	echo '#!/bin/sh\nexec /usr/bin/mono $MONO_OPTIONS /usr/lib/mono/produire/produire-mono/rdrc.exe "$@"' > /usr/bin/produire && \
+	echo '#!/bin/sh\nexec /usr/bin/mono /usr/lib/mono/produire/produire-mono/pconsole.exe "$@"' > /usr/bin/produire && \
 	chmod +x /usr/bin/produire && \
 	cd /opt && \
 	git clone --depth 1 https://github.com/Adriandmen/05AB1E.git && \
