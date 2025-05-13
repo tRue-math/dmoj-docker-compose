@@ -26,6 +26,9 @@ RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/platypus999/259bb49f36
     tar xf produire-mono-1.9.1182.tar.gz -C /usr/lib/mono/produire && \
 	echo '#!/bin/sh\nexec /usr/bin/mono /usr/lib/mono/produire/produire-mono/pconsole.exe "$@"' > /usr/bin/produire && \
 	chmod +x /usr/bin/produire && \
+	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/52eb41d8561507ab2799e9f7f07de670/raw/ee5585ef0b291c735c8b29891e0a757a5037e151/bf.py -L -o /usr/bin/bf-py && \
+	/usr/bin/pip3 install --break-system-packages getch && \
+	chmod +x /usr/bin/bf-py && \
 	cd /opt && \
 	git clone --depth 1 https://github.com/Adriandmen/05AB1E.git && \
 	cd 05AB1E && (yes | PATH=/usr/bin:$PATH mix local.hex) && \
