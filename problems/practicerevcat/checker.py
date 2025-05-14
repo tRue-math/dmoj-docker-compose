@@ -10,8 +10,12 @@ def check(process_output, judge_output, judge_input, point_value, **kwargs):
 
     source_code = source_code.decode("utf-8")
 
+    source_code = source_code.replace("\r\n","\n")
+
+    source_code = source_code.encode("utf-8")
+
     # read data as normal
     if process_output.rstrip() == judge_output.rstrip():
-        return CheckerResult(True, max(0, 100 - len(source_code)), "Ok answer is correct")
+        return CheckerResult(True, 100, "Ok answer is correct, code length: "+str(len(source_code)))
     else:
         return CheckerResult(False, 0, "Sorry answer is wrong")
