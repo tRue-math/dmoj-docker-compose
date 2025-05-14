@@ -18,4 +18,4 @@ def check(process_output, judge_output, judge_input, point_value, **kwargs):
     if process_output.rstrip() == judge_output.rstrip():
         return CheckerResult(True, 100, "Ok answer is correct, code length: "+str(len(source_code)))
     else:
-        return CheckerResult(False, 0, "Sorry answer is wrong")
+        return CheckerResult(False, 0, "Sorry answer is wrong, code length: "+str(len(source_code)))
