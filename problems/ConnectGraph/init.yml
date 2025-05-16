@@ -1,0 +1,24 @@
+test_cases:
+- batched:
+  - {in: case1.in, out: case1.out}
+  - {in: case2.in, out: case2.out}
+  - {in: 01.in, out: 01.out}
+  - {in: 02.in, out: 02.out}
+  - {in: 03.in, out: 03.out}
+  - {in: 04.in, out: 04.out}
+  - {in: 05.in, out: 05.out}
+  - {in: 06.in, out: 06.out}
+  - {in: 07.in, out: 07.out}
+  - {in: 08.in, out: 08.out}
+  - {in: 09.in, out: 09.out}
+  - {in: 10.in, out: 10.out}
+  - {in: 11.in, out: 11.out}
+  - {in: 12.in, out: 12.out}
+  - {in: 13.in, out: 13.out}
+  - {in: 14.in, out: 14.out}
+  - {in: 15.in, out: 15.out}
+  - {in: 16.in, out: 16.out}
+  - {in: 17.in, out: 17.out}
+  points: 100
+checker: checker.py
+points: 100

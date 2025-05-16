@@ -5,3 +5,5 @@ problems/*
 !problems/aplusb
 !problems/aa
 !problems/practicerevcat
+!problems/print100
+!problems/ConnectGraph
