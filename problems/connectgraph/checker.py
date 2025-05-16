@@ -49,7 +49,7 @@ def check(process_output, judge_output, judge_input, point_value, **kwargs):
             Graph[u].append(v)
         else:
             Graph[u] = [v]
-        if u in Graph:
+        if v in Graph:
             Graph[v].append(u)
         else:
             Graph[v] = [u]
