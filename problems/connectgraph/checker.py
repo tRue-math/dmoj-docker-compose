@@ -27,7 +27,7 @@ def check(process_output, judge_output, judge_input, point_value, **kwargs):
     for elem in splitted_output:
         if len(elem) == 0:
             continue
-        elem = re.sub(r"^0+","",elem[:-1]) + elem[:-1]
+        elem = re.sub(r"^0+", "", elem[:-1]) + elem[-1]
         num_seq.append(elem)
     
     flag = True
