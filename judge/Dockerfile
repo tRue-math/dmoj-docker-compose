@@ -4,7 +4,7 @@ ARG TAG=mayfes2025
 ARG TIMEOUT=60
 
 RUN apt-get update && \
-    apt-get install -y git libtiff-dev libgdiplus erlang elixir
+    apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12
 RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/platypus999/259bb49f364bef0549cde65eab676a3f/raw/b8d6a0d88c5e8bd6147392123e86cb679b2bab43/fish.py -L -o /usr/bin/fish && \
     chmod +x /usr/bin/fish && \
 	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/da6f9974456c1dbdea29a8e334ac6afb/raw/7533756e0c4622b809c4adbf4be5cdbb49579247/mao.py -L -o /usr/bin/mao && \
