@@ -37,8 +37,8 @@ runtime:
   fpc: /opt/fpc-2.6.4/bin/fpc
   clang: /usr/bin/clang
   clang++: /usr/bin/clang++
-  gcc: /usr/bin/gcc
-  gcc11: /usr/bin/gcc
+  gcc: /usr/bin/gcc-12
+  gcc11: /usr/bin/gcc-12
   g++: /usr/bin/g++
   g++11: /usr/bin/g++
   g++14: /usr/bin/g++
