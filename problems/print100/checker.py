@@ -2,7 +2,7 @@ from dmoj.result import CheckerResult
 
 def check(process_output, judge_output, judge_input, point_value, **kwargs):
     # convert from bytes to texts
-    process_output = process_output.decode("ascii", "ignore")
+    process_output = process_output.decode("ascii", "replace")
     judge_output = judge_output.decode("ascii")
     judge_input = judge_input.decode("ascii")
 
