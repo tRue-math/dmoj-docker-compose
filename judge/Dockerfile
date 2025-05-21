@@ -5,7 +5,7 @@ ARG TIMEOUT=60
 
 RUN apt-get update && \
     apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12
-RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/platypus999/259bb49f364bef0549cde65eab676a3f/raw/b8d6a0d88c5e8bd6147392123e86cb679b2bab43/fish.py -L -o /usr/bin/fish && \
+RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/3b54062756f31c1fa961f046c7ccd5d8/raw/cd4a765bf82fcf6a296c4c608fa0b14a6fbb38b9/fish.py -L -o /usr/bin/fish && \
     chmod +x /usr/bin/fish && \
 	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/da6f9974456c1dbdea29a8e334ac6afb/raw/7533756e0c4622b809c4adbf4be5cdbb49579247/mao.py -L -o /usr/bin/mao && \
 	chmod +x /usr/bin/mao && \
@@ -26,7 +26,7 @@ RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/platypus999/259bb49f36
     tar xf produire-mono-1.9.1182.tar.gz -C /usr/lib/mono/produire && \
 	echo '#!/bin/sh\nexec /usr/bin/mono /usr/lib/mono/produire/produire-mono/pconsole.exe "$@"' > /usr/bin/produire && \
 	chmod +x /usr/bin/produire && \
-	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/52eb41d8561507ab2799e9f7f07de670/raw/ee5585ef0b291c735c8b29891e0a757a5037e151/bf.py -L -o /usr/bin/bf-py && \
+	curl -m ${TIMEOUT} https://gist.githubusercontent.com/cuminum/2971133665df070915f47fe88a6418fd/raw/7c5eb6b1fe1f3f9f4b6fbe39edfe94780454a1bd/BF.py -L -o /usr/bin/bf-py && \
 	/usr/bin/pip3 install --break-system-packages getch && \
 	chmod +x /usr/bin/bf-py && \
 	cd /opt && \
