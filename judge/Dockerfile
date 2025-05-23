@@ -12,7 +12,10 @@ RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/3b54062756f3
 	runuser -u judge curl -m ${TIMEOUT} https://sh.rustup.rs -sSf | sh && \
 	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/0265103969895f168612096eb783f7c0/raw/5112559a96433503960c160ffe1f295d6566e794/starry.rb -L -o /usr/bin/starry && \
 	chmod +x /usr/bin/starry && \
-	git clone --depth 1 https://github.com/dnek/mines-esolang.git /opt/mines && \
+	curl -m ${TIMEOUT} https://github.com/dnek/mines-esolang/archive/d5694877a24f6c37a9c84a848febc683baffddc2.zip -L -o /opt/mines.zip && \
+	unzip /opt/mines.zip -d /opt/mines && \
+	mv /opt/mines/mines-esolang-*/* /opt/mines && \
+	rm -rf /opt/mines/mines-esolang-* && \
 	echo '#!/bin/sh\nexec /usr/bin/python3 /opt/mines/mines/mines.py "$@"' > /usr/bin/mines && \
 	chmod +x /usr/bin/mines && \
 	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/95c2937888f106def8a96e37f76a73b9/raw/61c9876c1121886eaa7bff15fed60b73268018af/ferNANDo.py -L -o /usr/bin/fernando && \
