@@ -1,0 +1,7 @@
+test_cases:
+- batched:
+  - {in: case1.in, out: case1.out}
+  - {in: case2.in, out: case2.out}
+  points: 100
+checker: checker.py
+points: 100

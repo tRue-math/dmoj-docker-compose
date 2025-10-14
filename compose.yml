@@ -63,16 +63,67 @@ services:
       site:
         condition: service_healthy
 
-  judge:
+  judge1:
     build: ./judge
     restart: always
     volumes:
       - ./problems:/problems
     cap_add:
       - SYS_PTRACE
-    command: run -c /problems/judge.yml bridged ${JUDGE_NAME} ${JUDGE_KEY}
+    command: run -c /problems/judge.yml bridged ${JUDGE_NAME1} ${JUDGE_KEY}
     depends_on:
       - bridged
 
+  judge2:
+    build: ./judge
+    restart: always
+    volumes:
+      - ./problems:/problems
+    cap_add:
+      - SYS_PTRACE
+    command: run -c /problems/judge.yml bridged ${JUDGE_NAME2} ${JUDGE_KEY}
+    depends_on:
+      - bridged
+
+  judge3:
+    build: ./judge
+    restart: always
+    volumes:
+      - ./problems:/problems
+    cap_add:
+      - SYS_PTRACE
+    command: run -c /problems/judge.yml bridged ${JUDGE_NAME3} ${JUDGE_KEY}
+    depends_on:
+      - bridged
+  judge4:
+    build: ./judge
+    restart: always
+    volumes:
+      - ./problems:/problems
+    cap_add:
+      - SYS_PTRACE
+    command: run -c /problems/judge.yml bridged ${JUDGE_NAME4} ${JUDGE_KEY}
+    depends_on:
+      - bridged
+  judge5:
+    build: ./judge
+    restart: always
+    volumes:
+      - ./problems:/problems
+    cap_add:
+      - SYS_PTRACE
+    command: run -c /problems/judge.yml bridged ${JUDGE_NAME5} ${JUDGE_KEY}
+    depends_on:
+      - bridged
+  judge6:
+    build: ./judge
+    restart: always
+    volumes:
+      - ./problems:/problems
+    cap_add:
+      - SYS_PTRACE
+    command: run -c /problems/judge.yml bridged ${JUDGE_NAME6} ${JUDGE_KEY}
+    depends_on:
+      - bridged
 volumes:
   db-data:

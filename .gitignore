@@ -4,3 +4,6 @@ problems/*
 !problems/judge.yml
 !problems/aplusb
 !problems/aa
+!problems/practicerevcat
+!problems/print100
+!problems/connectgraph
