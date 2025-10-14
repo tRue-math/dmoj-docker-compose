@@ -64,7 +64,9 @@ services:
         condition: service_healthy
 
   judge1:
-    build: ./judge
+    build:
+      context: .
+      dockerfile: ./judge/Dockerfile
     restart: always
     volumes:
       - ./problems:/problems
