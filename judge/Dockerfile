@@ -1,6 +1,6 @@
 FROM dmoj/runtimes-tier2
 
-ARG TAG=mayfes2025
+ARG TAG=komabafes2025
 ARG TIMEOUT=60
 
 RUN apt-get update && \
