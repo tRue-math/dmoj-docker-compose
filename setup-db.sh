@@ -7,10 +7,10 @@ python3 manage.py loaddata navbar
 python3 manage.py loaddata language_all
 python3 manage.py loaddata demo
 python3 manage.py addjudge $JUDGE_NAME1 $JUDGE_KEY || true
-python3 manage.py addjudge $JUDGE_NAME2 $JUDGE_KEY || true
-python3 manage.py addjudge $JUDGE_NAME3 $JUDGE_KEY || true
-python3 manage.py addjudge $JUDGE_NAME4 $JUDGE_KEY || true
-python3 manage.py addjudge $JUDGE_NAME5 $JUDGE_KEY || true
-python3 manage.py addjudge $JUDGE_NAME6 $JUDGE_KEY || true
+# python3 manage.py addjudge $JUDGE_NAME2 $JUDGE_KEY || true
+# python3 manage.py addjudge $JUDGE_NAME3 $JUDGE_KEY || true
+# python3 manage.py addjudge $JUDGE_NAME4 $JUDGE_KEY || true
+# python3 manage.py addjudge $JUDGE_NAME5 $JUDGE_KEY || true
+# python3 manage.py addjudge $JUDGE_NAME6 $JUDGE_KEY || true
 
 python3 manage.py runserver 0.0.0.0:8000
