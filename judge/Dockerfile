@@ -4,7 +4,7 @@ ARG TAG=komabafes2025
 ARG TIMEOUT=60
 
 RUN apt-get update && \
-    apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12
+    apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12 nasm binutils
 RUN	runuser -u judge curl -m ${TIMEOUT} https://sh.rustup.rs -sSf | sh && \
 	curl -m ${TIMEOUT} https://github.com/dnek/mines-esolang/archive/d5694877a24f6c37a9c84a848febc683baffddc2.zip -L -o /opt/mines.zip && \
 	unzip /opt/mines.zip -d /opt/mines && \
