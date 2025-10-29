@@ -65,6 +65,9 @@ runtime:
   produire: /usr/bin/produire
   osabie: /usr/bin/05ab1e
   bf-py: /usr/bin/bf-py
+  backhand: /usr/bin/backhand
+  ld_x64: /usr/bin/ld
+  bubble-sort: /usr/bin/bubble-sort
 # Custom V8 build to facilitate online judging: https://github.com/DMOJ/v8dmoj
   v8dmoj: /home/judge/judge/executors/v8dmoj
   php: /usr/bin/php

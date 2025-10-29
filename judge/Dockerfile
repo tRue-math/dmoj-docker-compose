@@ -1,47 +1,30 @@
 FROM dmoj/runtimes-tier2
 
-ARG TAG=mayfes2025
+ARG TAG=komabafes2025
 ARG TIMEOUT=60
 
 RUN apt-get update && \
-    apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12
-RUN	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/3b54062756f31c1fa961f046c7ccd5d8/raw/cd4a765bf82fcf6a296c4c608fa0b14a6fbb38b9/fish.py -L -o /usr/bin/fish && \
-    chmod +x /usr/bin/fish && \
-	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/da6f9974456c1dbdea29a8e334ac6afb/raw/7533756e0c4622b809c4adbf4be5cdbb49579247/mao.py -L -o /usr/bin/mao && \
-	chmod +x /usr/bin/mao && \
-	runuser -u judge curl -m ${TIMEOUT} https://sh.rustup.rs -sSf | sh && \
-	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/0265103969895f168612096eb783f7c0/raw/5112559a96433503960c160ffe1f295d6566e794/starry.rb -L -o /usr/bin/starry && \
-	chmod +x /usr/bin/starry && \
+    apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12 nasm binutils
+RUN	runuser -u judge curl -m ${TIMEOUT} https://sh.rustup.rs -sSf | sh && \
 	curl -m ${TIMEOUT} https://github.com/dnek/mines-esolang/archive/d5694877a24f6c37a9c84a848febc683baffddc2.zip -L -o /opt/mines.zip && \
 	unzip /opt/mines.zip -d /opt/mines && \
 	mv /opt/mines/mines-esolang-*/* /opt/mines && \
 	rm -rf /opt/mines/mines-esolang-* && \
-	echo '#!/bin/sh\nexec /usr/bin/python3 /opt/mines/mines/mines.py "$@"' > /usr/bin/mines && \
-	chmod +x /usr/bin/mines && \
-	curl -m ${TIMEOUT} https://gist.githubusercontent.com/tRue-math/95c2937888f106def8a96e37f76a73b9/raw/61c9876c1121886eaa7bff15fed60b73268018af/ferNANDo.py -L -o /usr/bin/fernando && \
-	chmod +x /usr/bin/fernando && \
-	cd /tmp && \
-	git clone --depth 1 https://github.com/aheui/caheui.git && \
-	cd caheui && make && mv aheui /usr/bin/aheui && \
-	cd /tmp && \
     curl https://rdr.utopiat.net/files/mono//produire-mono-1.9.1182.tar.gz -LO && \
     mkdir -p /usr/lib/mono/produire && \
     tar xf produire-mono-1.9.1182.tar.gz -C /usr/lib/mono/produire && \
-	echo '#!/bin/sh\nexec /usr/bin/mono /usr/lib/mono/produire/produire-mono/pconsole.exe "$@"' > /usr/bin/produire && \
-	chmod +x /usr/bin/produire && \
-	curl -m ${TIMEOUT} https://gist.githubusercontent.com/cuminum/2971133665df070915f47fe88a6418fd/raw/7c5eb6b1fe1f3f9f4b6fbe39edfe94780454a1bd/BF.py -L -o /usr/bin/bf-py && \
 	/usr/bin/pip3 install --break-system-packages getch && \
-	chmod +x /usr/bin/bf-py && \
 	cd /opt && \
 	git clone --depth 1 https://github.com/Adriandmen/05AB1E.git && \
 	cd 05AB1E && (yes | PATH=/usr/bin:$PATH mix local.hex) && \
     PATH=/usr/bin:$PATH mix deps.get && \
 	mix deps.update hackney && \
     (yes | PATH=/usr/bin:$PATH MIX_ENV=prod mix escript.build) && \
-	echo '#!/bin/sh\nexec /usr/bin/escript /opt/05AB1E/osabie "$@"'>/usr/bin/05ab1e && \
-	chmod +x /usr/bin/05ab1e && \
 	cd && \
     rm -rf /var/cache/apk/* /tmp/*
+
+COPY ./scripts /usr/bin/
+RUN chmod -R a+rx /usr/bin/
 
 RUN mkdir /judge /problems && cd /judge && \
 	curl -L https://github.com/tRue-math/judge-server/archive/"${TAG}".tar.gz | tar -xz --strip-components=1 && \
