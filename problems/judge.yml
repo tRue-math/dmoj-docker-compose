@@ -83,3 +83,6 @@ runtime:
   bash: /usr/bin/bash
   pypy3: /opt/pypy3/bin/pypy3.11
   ruby: /usr/bin/ruby
+  whitepycli: /usr/local/bin/whitepycli
+  alice: /usr/bin/ruby
+  vim-executor: /usr/bin/vim-executor

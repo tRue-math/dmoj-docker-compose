@@ -4,7 +4,7 @@ ARG TAG=komabafes2025
 ARG TIMEOUT=60
 
 RUN apt-get update && \
-    apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12 nasm binutils
+    apt-get install -y git libtiff-dev libgdiplus erlang elixir gcc-12 nasm binutils vim gfortran
 RUN	runuser -u judge curl -m ${TIMEOUT} https://sh.rustup.rs -sSf | sh && \
 	curl -m ${TIMEOUT} https://github.com/dnek/mines-esolang/archive/d5694877a24f6c37a9c84a848febc683baffddc2.zip -L -o /opt/mines.zip && \
 	unzip /opt/mines.zip -d /opt/mines && \
@@ -20,11 +20,13 @@ RUN	runuser -u judge curl -m ${TIMEOUT} https://sh.rustup.rs -sSf | sh && \
     PATH=/usr/bin:$PATH mix deps.get && \
 	mix deps.update hackney && \
     (yes | PATH=/usr/bin:$PATH MIX_ENV=prod mix escript.build) && \
+	/usr/bin/pip3 install --break-system-packages whitepy && \
+  cd /opt && git clone https://github.com/m-ender/alice.git && \
 	cd && \
     rm -rf /var/cache/apk/* /tmp/*
 
-COPY ./scripts /usr/bin/
-RUN chmod -R a+rx /usr/bin/
+COPY --chmod=755 ./scripts /usr/bin/
+RUN cd /usr/bin &&gcc vim-executor.c -o vim-executor
 
 RUN mkdir /judge /problems && cd /judge && \
 	curl -L https://github.com/tRue-math/judge-server/archive/"${TAG}".tar.gz | tar -xz --strip-components=1 && \
