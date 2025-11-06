@@ -1,0 +1,242 @@
+[
+{
+    "model": "judge.language",
+    "pk": 1001,
+    "fields": {
+        "key": "FISH",
+        "name": "><>",
+        "short_name": "",
+        "common_name": "><>",
+        "ace": "fish",
+        "pygments": "fish",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "fish"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1002,
+    "fields": {
+        "key": "AHEUI",
+        "name": "Aheui",
+        "short_name": "",
+        "common_name": "Aheui",
+        "ace": "aheui",
+        "pygments": "aheui",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "aheui"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1003,
+    "fields": {
+        "key": "FNANDO",
+        "name": "Fernando",
+        "short_name": "",
+        "common_name": "Fernando",
+        "ace": "fernando",
+        "pygments": "fernando",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "fernando"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1004,
+    "fields": {
+        "key": "MINES",
+        "name": "Mines",
+        "short_name": "",
+        "common_name": "Mines",
+        "ace": "mines",
+        "pygments": "mines",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "mines"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1005,
+    "fields": {
+        "key": "PRDR",
+        "name": "プロデル",
+        "short_name": "",
+        "common_name": "プロデル",
+        "ace": "produire",
+        "pygments": "produire",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "produire"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1006,
+    "fields": {
+        "key": "STARRY",
+        "name": "Starry",
+        "short_name": "",
+        "common_name": "Starry",
+        "ace": "starry",
+        "pygments": "starry",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "starry"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1007,
+    "fields": {
+        "key": "OSABIE",
+        "name": "05AB1E",
+        "short_name": "",
+        "common_name": "05AB1E",
+        "ace": "osabie",
+        "pygments": "osabie",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "osabie"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1008,
+    "fields": {
+        "key": "BFPY",
+        "name": "Brainf*ck Python",
+        "short_name": "",
+        "common_name": "Brainf*ck",
+        "ace": "brainfuck",
+        "pygments": "brainfuck",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "bf"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1009,
+    "fields": {
+        "key": "MAO",
+        "name": "MAO",
+        "short_name": "",
+        "common_name": "MAO",
+        "ace": "mao",
+        "pygments": "mao",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "mao"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1010,
+    "fields": {
+        "key": "BHAND",
+        "name": "Backhand",
+        "short_name": "",
+        "common_name": "Backhand",
+        "ace": "backhand",
+        "pygments": "backhand",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "backhand"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1011,
+    "fields": {
+        "key": "BSL",
+        "name": "BubbleSortLanguage",
+        "short_name": "",
+        "common_name": "BubbleSort",
+        "ace": "bsl",
+        "pygments": "bsl",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "bsl"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1012,
+    "fields": {
+        "key": "WSPACE",
+        "name": "Whitespace",
+        "short_name": "",
+        "common_name": "Whitespace",
+        "ace": "whitespace",
+        "pygments": "whitespace",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "ws"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1013,
+    "fields": {
+        "key": "ALICE",
+        "name": "Alice",
+        "short_name": "",
+        "common_name": "Alice",
+        "ace": "alice",
+        "pygments": "alice",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "alice"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1014,
+    "fields": {
+        "key": "VIM",
+        "name": "Vim",
+        "short_name": "",
+        "common_name": "Vim",
+        "ace": "vim",
+        "pygments": "vim",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "vim"
+    }
+},
+{
+    "model": "judge.language",
+    "pk": 1015,
+    "fields": {
+        "key": "GRASS",
+        "name": "Grass",
+        "short_name": "",
+        "common_name": "Grass",
+        "ace": "grass",
+        "pygments": "grass",
+        "template": "",
+        "info": "",
+        "description": "",
+        "extension": "grass"
+    }
+}
+]

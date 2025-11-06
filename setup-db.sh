@@ -5,6 +5,7 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py loaddata navbar
 python3 manage.py loaddata language_all
+python3 manage.py loaddata language_added
 python3 manage.py loaddata demo
 python3 manage.py addjudge $JUDGE_NAME1 $JUDGE_KEY || true
 # python3 manage.py addjudge $JUDGE_NAME2 $JUDGE_KEY || true

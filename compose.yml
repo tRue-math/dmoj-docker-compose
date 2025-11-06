@@ -19,6 +19,7 @@ services:
       retries: 10
     
   celery:
+    image: site
     build: ./site
     stdin_open: true
     env_file:
@@ -28,6 +29,7 @@ services:
       - redis
 
   site:
+    image: site
     build: ./site
     restart: always
     stdin_open: true
@@ -53,6 +55,7 @@ services:
         condition: service_started
 
   bridged:
+    image: site
     build: ./site
     restart: always
     stdin_open: true
@@ -64,6 +67,7 @@ services:
         condition: service_healthy
 
   judge1:
+    image: judge
     build:
       context: .
       dockerfile: ./judge/Dockerfile
@@ -77,7 +81,10 @@ services:
       - bridged
 
   # judge2:
-  #   build: ./judge
+  #   image: judge
+  #   build:
+  #     context: .
+  #     dockerfile: ./judge/Dockerfile
   #   restart: always
   #   volumes:
   #     - ./problems:/problems
@@ -88,7 +95,10 @@ services:
   #     - bridged
 
   # judge3:
-  #   build: ./judge
+  #   image: judge
+  #   build:
+  #     context: .
+  #     dockerfile: ./judge/Dockerfile
   #   restart: always
   #   volumes:
   #     - ./problems:/problems
@@ -98,7 +108,10 @@ services:
   #   depends_on:
   #     - bridged
   # judge4:
-  #   build: ./judge
+  #   image: judge
+  #   build:
+  #     context: .
+  #     dockerfile: ./judge/Dockerfile
   #   restart: always
   #   volumes:
   #     - ./problems:/problems
@@ -108,7 +121,10 @@ services:
   #   depends_on:
   #     - bridged
   # judge5:
-  #   build: ./judge
+  #   image: judge
+  #   build:
+  #     context: .
+  #     dockerfile: ./judge/Dockerfile
   #   restart: always
   #   volumes:
   #     - ./problems:/problems
@@ -118,7 +134,10 @@ services:
   #   depends_on:
   #     - bridged
   # judge6:
-  #   build: ./judge
+  #   image: judge
+  #   build:
+  #     context: .
+  #     dockerfile: ./judge/Dockerfile
   #   restart: always
   #   volumes:
   #     - ./problems:/problems
