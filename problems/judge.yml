@@ -86,3 +86,4 @@ runtime:
   whitepycli: /usr/local/bin/whitepycli
   alice: /usr/bin/ruby
   vim-executor: /usr/bin/vim-executor
+  grass: /usr/bin/grass
